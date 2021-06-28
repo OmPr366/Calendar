@@ -99,3 +99,33 @@ function makeCalender() {
   }
 }
 makeCalender();
+
+
+const backgroundChange =(imageSrcc)=>{
+  let contBack = document.getElementsByClassName('naturalBg')[0].style;
+  let contBack1 = document.getElementsByClassName('calender_pic')[0].style;
+
+  contBack.background = `url(${imageSrcc})`;
+  contBack.backgroundSize = 'cover';
+  contBack.backgroundPosition = 'center';
+  
+  contBack1.background = `url(${imageSrcc})`;
+  contBack1.backgroundSize = 'cover';
+  contBack1.backgroundPosition = 'center';
+}
+
+
+const apiCall = ()=>{
+  const URL = "https://api.unsplash.com/photos/random?query= natural";
+  fetch(URL,{
+      headers:{
+          'Authorization': 'Client-ID au1HfKd9cz7xIAxq6jkzHNVMBzKU7D8-atKUsYnRwIE'
+      }
+  }).then(res=>res.json())
+      .then(res => {
+          imageUrl = res.urls.small;
+          backgroundChange(imageUrl);
+      })
+      .catch(error => console.log(error))
+}
+apiCall();

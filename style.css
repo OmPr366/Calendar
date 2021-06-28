@@ -31,6 +31,8 @@ body::before{
     border-top-left-radius: 10px;
     border-top-right-radius: 20%;
     transform: scale(1.4);
+    border: 2px solid black;
+    
 }
 
 .calender_pic{
@@ -40,7 +42,7 @@ body::before{
     color: white;
     background: #262626 url("bg.jpg") no-repeat center/ cover;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    
 }
 
 .calender::before{
@@ -53,6 +55,18 @@ body::before{
     background: linear-gradient(to top, rgba(0,0,0,0.1));
 
 }
+.changeEvery{
+    position: relative;
+    width: 100%;
+    height: 50%; 
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    /* margin-top: 4rem; */
+    background-color: rgb(0, 0, 0);
+}
 
 .calender_pic h2{
     margin: 0;
@@ -61,6 +75,13 @@ body::before{
 .calender_pic h3{
     margin: 0;
     font-weight: 500;
+}
+
+.fa-angle-right{
+    position: relative;
+    justify-content: center;
+    align-items: flex;
+    margin: auto;
 }
 
 .calender_date{
