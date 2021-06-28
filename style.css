@@ -30,7 +30,7 @@ body::before{
     overflow: hidden;
     border-top-left-radius: 10px;
     border-top-right-radius: 20%;
-    transform: scale(1.4);
+    transform: scale(1.0);
     border: 2px solid black;
     
 }
